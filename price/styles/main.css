@@ -59,16 +59,6 @@ body{
 	width: 100%;
 	top: 0;
 }
-.iconPart{
-	position: relative;
-	width: 100%;
-    border-bottom: 1.2vw solid #e5e5e5;
-}
-.iconPart > img{
-	display: block;
-	position: relative;
-	width: 100%;
-}
 .title{
 	position: relative;
 	width: 100%;
@@ -100,7 +90,7 @@ body{
   -ms-box-sizing:border-box;
   -o-box-sizing:border-box;
 }
-.apointmentForm #name{
+.apointmentForm #area{
 	height: 12.5vw;
 	line-height: 12.5vw;
 	padding: 0 0 0 6.2vw;

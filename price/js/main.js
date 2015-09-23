@@ -8,12 +8,12 @@ $(document).ready(function(){
 
 
 function submit(){
-	var name=$("#name").val(),
+	var area=$("#area").val(),
 		phoneNum=$("#phoneNum").val(),
 		budget=$("#budget").val(),
 		city=$("#city").val();
 
-		if(name==""){
+		if(area==""){
 			showAlert("请输入房屋面积");
 			return false;
 		}
@@ -31,12 +31,13 @@ function submit(){
 		}
 
 		$(this).attr("disabled","disabled");
-		$.post("mobile_apply.php",{name:name,phone:phoneNum,city_id:city,yusuan:budget,act:'mobile'},function(data){
+		$.post("mobile_apply.php",{area:area,phone:phoneNum,city_id:city,yusuan:budget,act:'mobile'},function(data){
 			if(data == 'success')
 			{
-				$("#name").val("").css("border-color","green");
+				$("#area").val("").css("border-color","green");
 				$("#phoneNum").val("").css("border-color","green");
-				$("#city").val(0).css("border-color","green #E5E5E5 #E5E5E5 #E5E5E5");
+				$("#budget").val(0).css("border-color","green #E5E5E5 #E5E5E5 #E5E5E5");
+				$("#city").val(0);
 				$("#box").css("display","block");
 				setTimeout(function(){
 					$("#box").css("display","none");
