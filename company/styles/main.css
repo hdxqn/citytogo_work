@@ -1,0 +1,695 @@
+@charset UTF-8;
+*{
+-webkit-tap-highlight-color: transparent;
+-webkit-touch-callout:none;
+-webkit-user-select:none;
+-khtml-user-select:none;
+-moz-user-select:none;
+-ms-user-select:none;
+user-select:none; 
+}
+html{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	min-height: 100vh;
+}
+body{  
+	width: 100%;
+	min-height: 100vh;
+	position: relative;
+	background: transparent;  
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑",arial;
+}
+@font-face {font-family: 'iconfont';
+    src: url('iconfont.eot'); /* IE9*/
+    src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('iconfont.woff') format('woff'), /* chrome、firefox */
+    url('iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+.top{
+	position: relative;
+	width: 100vw;
+	height: 13.4vw;
+	line-height: 13.4vw;
+	text-align: center;
+	font-size: 5.9vw;
+	border-bottom: 1px solid rgb(229,229,229);
+}
+.top .position{
+	position: absolute;
+    height:100%;
+    right: 3.6vw;
+    top:0;
+    font-size:3.8vw ;
+    line-height: 13.4vw;
+    color: #707070;
+}
+.top .position > img{
+	position: absolute;
+	top: 0;
+	right: 100%;
+	height: 100%;
+	margin: 0 1.8vw 0 0;
+}
+.top .homeHref{
+	position: absolute;
+	width: 13.4vw;
+	left: 0;
+	height: 13.4vw;
+	top: 0;
+	background: url(http://img.tugou.com/mb/images/m_index/icon.png) no-repeat center center;
+	background-size: 3.2vw auto;
+	z-index: 90;
+	 -webkit-transform:rotate3D(0,0,1,90deg);
+  -moz-transform:rotate3D(0,0,1,90deg);
+  -o-transform:rotate3D(0,0,1,90deg);
+  -ms-transform:rotate3D(0,0,1,90deg);
+  transform:rotate3D(0,0,1,90deg);
+}
+.banner{
+	position: relative;
+	width: 100%;
+	height: 11vw;
+	border-bottom: 1px solid rgb(229,229,229);
+	box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -ms-box-sizing:border-box;
+  -o-box-sizing:border-box;
+}
+.banner > div{
+	position: relative;
+	width: 50%;
+	height: 100%;
+	float: left;
+	box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -ms-box-sizing:border-box;
+  -o-box-sizing:border-box;
+}
+.banner > .area{
+	border-right: 1px solid rgb(229,229,229);
+}
+.banner > .sort{
+	border-left: 1px solid rgb(229,229,229);
+	margin: 0 0 0 -1px;
+}
+.banner > div > span{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: 11vw;
+	font-size: 3.9vw;
+	z-index: 99;
+}
+.banner > div > i{
+	position: absolute;
+	width: 2.6vw;
+	height: 100%;
+	right:12.5%; 
+	background: url(http://img.tugou.com/mb/images/m_index/icon.png) no-repeat center center;
+	background-size: 2.6vw auto;
+}
+.banner .areaBanner{
+	display: none;
+	position: relative;
+	width: 200%;
+	top: 100%;
+	left: 0;
+	height: auto;
+	text-align: center;
+	border-top:1px solid rgb(229,229,229);
+	background: #FFFFFF; 
+	padding: 4vw 0 6.8vw 0;
+	z-index: 900;
+}
+.banner .areaBanner::before{
+	content: '';
+	position: absolute;
+	bottom: 100%;
+	left: 26.5%;
+	margin: 0 0 0 -3vw;
+	width: 0;
+	height: 0;
+	border-width:0 3vw 3vw 3vw;
+  	border-style:solid;
+  	border-color:transparent transparent rgb(229,229,229) transparent;
+}
+.banner .areaBanner::after{
+	content: '';
+	position: absolute;
+	bottom: 100%;
+	left: 26.5%;
+	margin: 0 0 0 -2.4vw;
+	width: 0;
+	height: 0;
+	border-width:0 2.4vw 2.4vw 2.4vw;
+  	border-style:solid;
+  	border-color:transparent transparent #FFFFFF transparent;
+}
+.banner .areaBanner .areaItem{
+	/*display: inline-block;*/
+	position: relative;
+	height: 7.8vw;
+	width: 26.5vw;
+	font-size: 3.7vw;
+	line-height: 7.8vw;
+	text-align: center;
+	float: left;
+	border: 1px solid rgb(210,210,210);
+	box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -ms-box-sizing:border-box;
+  -o-box-sizing:border-box;
+}
+.banner .areaBanner .areaItem:nth-child(3n+1){
+	margin: 0 0 3.8vw 5.35vw;
+}
+.banner .areaBanner .areaItem:nth-child(3n+2){
+	margin: 0 4.8vw 3.8vw 4.8vw;
+}
+.banner .areaBanner .areaItem:nth-child(3){
+	margin: 0 0 3.8vw 0;
+
+}
+.banner .areaBanner .areaItem:nth-child(3)::before{
+	content: '';
+	display: block;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	clear: both;
+}
+.banner .areaBanner .areaItem .areaRadio{
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	z-index: 9999;
+}
+.banner .areaBanner .areaItem > .radioBg{
+	position: absolute;
+	margin: 0;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.banner .areaBanner .areaRadio:checked ~ .radioBg{
+	background: rgb(229,229,229);
+}
+.banner .bannerMask{
+	position: absolute;
+	width: 100%;
+	height: 1200px;
+	top: 100%;
+	left: 0;
+	background: rgba(0, 0, 0, 0.6)!important;
+    background: #000;
+    filter: Alpha(opacity=60);
+
+}
+
+.sort .sortBanner{
+	display: none;
+	position: relative;
+	width: 200%;
+	top: 100%;
+	left: -100%;
+	border-top:1px solid rgb(229,229,229);
+	background: #FFFFFF; 
+	z-index: 900;
+}
+/*.sort .sortBanner::before{
+	content: '';
+	position: absolute;
+	bottom: 100%;
+	right: 26.5%;
+	margin: 0 -3vw 0 0;
+	width: 0;
+	height: 0;
+	border-width:0 3vw 3vw 3vw;
+  	border-style:solid;
+  	border-color:transparent transparent rgb(229,229,229) transparent;
+}
+.sort .sortBanner::after{
+	content: '';
+	position: absolute;
+	bottom: 100%;
+	right: 26.5%;
+	margin: 0 -2.4vw 0 0;
+	width: 0;
+	height: 0;
+	border-width:0 2.4vw 2.4vw 2.4vw;
+  	border-style:solid;
+  	border-color:transparent transparent #FFFFFF transparent;
+}*/
+.sort .sortBanner .sortItem{
+	position: relative;
+	width: 100%;
+	height: 11vw;
+	border-bottom:1px solid rgb(229,229,229);
+	box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -ms-box-sizing:border-box;
+  -o-box-sizing:border-box;
+}
+.sort .sortBanner .sortItem .sortTrangle{
+	position: absolute;
+	width: 100%;
+	height: 0;
+}
+.sort .sortBanner .sortItem > span{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	line-height: 11vw;
+	text-align: center;
+	font-size: 3.7vw;
+}
+.sort .sortBanner .sortItem .sortTrangle::before{
+	content: '';
+	position: absolute;
+	bottom: 100%;
+	right: 26.5%;
+	margin: 0 -3vw 0 0;
+	width: 0;
+	height: 0;
+	border-width:0 3vw 3vw 3vw;
+  	border-style:solid;
+  	border-color:transparent transparent rgb(229,229,229) transparent;
+}
+.sort .sortBanner .sortItem .sortTrangle::after{
+	content: '';
+	position: absolute;
+	bottom: 100%;
+	right: 26.5%;
+	margin: 0 -2.4vw 0 0;
+	width: 0;
+	height: 0;
+	border-width:0 2.4vw 2.4vw 2.4vw;
+  	border-style:solid;
+  	border-color:transparent transparent #FFFFFF transparent;
+}
+.sort .sortBanner .sortItem .sortRadio{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	opacity: 0;
+	z-index: 999;
+}
+.sort .sortBanner .sortItem .sortRadio:checked + .sortTrangle::after{
+	opacity: 0;
+	visibility: hidden;
+}
+.sort .sortBanner .sortItem .sortRadio:checked ~ span{
+	background: rgb(229,229,229);
+}
+.sort .sortBanner .sortMask{
+	position: absolute;
+	width: 100%;
+	height: 1200px;
+	top: 100%;
+	left: 0;
+	background: rgba(0, 0, 0, 0.6)!important;
+    background: #000;
+    filter: Alpha(opacity=60);
+}
+#hotLine{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 9vw;
+		 box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -ms-box-sizing:border-box;
+  -o-box-sizing:border-box;
+  border-width: 1px 0 0 0;
+  border-style: solid;
+  border-color: #E5E5E5;
+}
+.list{
+	position: relative;
+	width: 100%;
+	min-height: 200px;
+}
+.list .listItem{
+	position: relative;
+	width: 100%;
+	height:27.2vw;
+	border-bottom:1px solid rgb(229,229,229);
+	padding: 2.7vw 4vw 0 4vw;
+	 box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -ms-box-sizing:border-box;
+  -o-box-sizing:border-box;
+}
+.list .listItem .listImg{
+	position: relative;
+	float: left;
+	width: 21.8vw;
+	height: 21.8vw;
+	margin: 0 3.7vw 0 0;
+	border: 1px solid rgb(229,229,229);
+	box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -ms-box-sizing:border-box;
+  -o-box-sizing:border-box;
+}
+.list .listItem .listImg > img{
+	position: absolute;
+	width: 96%;
+	height: 96%;
+	top: 2%;
+	left: 2%;
+}
+.list .listItem .listContent{
+	float: left;
+	position: relative;
+}
+.list .listItem .listContent .companyName{
+	display: block;
+	float: left;
+	line-height: 10vw;
+	font-size: 4.2vw;
+	font-weight: 700;
+	margin: 0 2.8vw 0 0;
+}
+.list .listItem .listContent .companyIcon{
+	display: block;
+	height: 4vw;
+	margin: 3vw 1.4vw 0 0;
+	float: left;
+}
+.list .listItem .listContent i{
+	font-style: normal;
+}
+.list .listItem .listContent .designer,
+.list .listItem .listContent .workers{
+	position: relative;
+	font-size: 3.2vw;
+	margin: 0 0 0 3.8vw;
+	color: rgb(98,98,98);
+}
+.list .listItem .listContent .designer::before{
+	content: '';
+	position: absolute;
+	width: 4vw;
+	height: 4vw;
+	top:50%;
+	margin: -2vw 0 0 0;
+	right: 100%;
+	background: url(../images/designer.png) no-repeat center center;
+	background-size: 100% auto;
+}
+.list .listItem .listContent .workers::before{
+	content: '';
+	position: absolute;
+	width: 4vw;
+	height: 4vw;
+	top:50%;
+	margin: -2vw 0 0 0;
+	right: 100%;
+	background: url(../images/team.png) no-repeat center center;
+	background-size: 100% auto;
+}
+.list .listItem .listIfo{
+	float: right;
+}
+.list .listItem .listIfo i{
+	font-style: normal;
+}
+.list .listItem .listIfo .listSorce{
+	display: block;
+	float: right;
+	color: rgb(32,165,131);
+	font-size:2.6vw; 
+	line-height: 10vw;
+}
+.list .listItem .listIfo .listSorce > i{
+	font-size: 6vw;
+}
+.list .listItem .listIfo .userNum{
+	font-size: 3.2vw;
+	line-height: 11vw;
+}
+@media screen and (max-width: 327px){
+	.list .listItem .listIfo .userNum{
+		display: none;
+	}
+}
+#hotLine > a{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+	line-height: 9vw;
+	text-align: center;
+	background-color: #FFFFFF;
+	color: #009973;
+	border: none;
+}
+.floatOver{
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	clear: both;
+}
+#box{
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 9999;
+	width: 100%;
+	height: 100000px;
+	background:rgba(0, 0, 0, 0.6)!important;
+	background:#000;
+	filter:Alpha(opacity=60);
+}
+.box-con{
+	position: fixed;
+	left: 17.2vw;
+	top: 3.5vh;
+	background: url(http://img.tugou.com/mb/images/m_index/box.png) no-repeat;
+	background-size: 100%;
+	width: 65.6vw;
+	height: 40.9vw;
+	padding:42.2vw 0 0 0; 
+}
+#close-box{
+	width: 5.4vw;
+	height: 5.4vw;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.box-title{
+	text-align: center;
+	font-size: 7.6vw;
+	color: #009973;
+	line-height: 6vw;
+}
+.box-text{
+	text-align: center;
+	font-size: 3.8vw;
+	line-height: 4.6vw;
+	color: #444444;
+	margin: 0;
+}
+.box-time{
+	font-size: 0.55rem;
+	text-align: center;
+	color: #ffb035;
+}
+#alert{
+	border-radius: 0.7vw;
+	text-align: center;
+	width: 50%;
+	height: 6.3vw;
+	line-height: 6.3vw;
+	font-size: 3.8vw;
+	color: #FFFFFF;
+	position: fixed;
+	left: 25%;
+	bottom: 2vw;
+	z-index: 999;
+	background:rgba(0, 0, 0, 0.8)!important;
+	background:#000;filter:Alpha(opacity=80);
+	z-index: 9999;
+}
+.turnAround{
+	-webkit-transform:rotate3D(0,0,1,180deg);
+  -moz-transform:rotate3D(0,0,1,180deg);
+  -o-transform:rotate3D(0,0,1,180deg);
+  -ms-transform:rotate3D(0,0,1,180deg);
+  transform:rotate3D(0,0,1,180deg);
+}
+#yuyue{
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	background: rgba(0,0,0,.6);
+	top: 0;
+	left: 0;
+}
+.apointmentForm{
+	display: block;
+	position: relative;
+	width: 75vw;
+	background: #FFFFFF;
+	border-radius: 4vw; 
+	height: 90.6vw;
+	left: 50%;
+	top: 50%;
+	margin: -45.3vw 0 0 -37.5vw;
+}
+.apointmentForm > input,
+.apointmentForm > select{
+	display: block;
+	position: relative;
+	width: 84%;
+	left: 8%;
+	font-size: 3.8vw;
+	font-family: "微软雅黑",Arial;
+	-webkit-appearance: none;
+	/*letter-spacing: 0.4vw;*/
+	outline: none;
+	 box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -ms-box-sizing:border-box;
+  -o-box-sizing:border-box;
+}
+.apointmentForm .afCtrl{
+	position: relative;
+	width: 100%;
+	height: 21.5vw;
+	padding: 4vw 0 0 0;
+	 box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -ms-box-sizing:border-box;
+  -o-box-sizing:border-box;
+}
+.apointmentForm #name{
+	height: 12.5vw;
+	line-height: 12.5vw;
+	padding: 0 0 0 6.2vw;
+	color: #bfbfbf;
+	border: 1px solid #E5E5E5;
+	border-width: 1px 1px 0 1px;
+}
+.apointmentForm #phoneNum{
+	height: 12.5vw;
+	line-height: 12.5vw;
+	padding: 0 0 0 6.2vw;
+	color: #bfbfbf;
+	border: 1px solid #E5E5E5;
+	border-width: 1px 1px 0 1px;
+}
+.apointmentForm #budget{
+	height: 12.5vw;
+	line-height: 12.5vw;
+	padding: 0 0 0 6.2vw;
+	color: #bfbfbf;
+	border: 1px solid #E5E5E5;
+	border-width: 1px 1px 0 1px;
+	color: #565656;
+}
+.apointmentForm #city{
+	height: 12.5vw;
+	line-height: 12.5vw;
+	padding: 0 0 0 6.2vw;
+	color: #bfbfbf;
+	border: 1px solid #E5E5E5;
+	color: #565656;
+}
+.apointmentForm #entirety{
+	height: 12.5vw;
+	background-color: #0dd196;
+	font-size: 5.6vw;
+	line-height: 12.5vw;
+	text-align: center;
+	color: #fffb00;
+	margin: 2.1vw 0 0 0;
+	outline: none;
+	border: none;
+}
+.proNum{
+	position: relative;
+	width: 100%;
+	height: 12.5vw;
+	line-height: 12.5vw;
+	text-align: center;
+	color: #7d7d7d;
+	font-size: 3.7vw;
+}
+.proNum > i{
+	font-style: normal;
+	color: #009973;
+}
+.apointmentForm .budgetIcon{
+	position: absolute;
+	width: 3.2vw;
+	right: 12%;
+	height: 12.5vw;
+	top: 47.5vw;
+	background: url(http://img.tugou.com/mb/images/m_index/icon.png) no-repeat center center;
+	background-size: 100% auto;
+	z-index: 90;
+}
+.apointmentForm .cityIcon{
+	position: absolute;
+	width: 3.2vw;
+	right: 3.5%;
+	height: 12.5vw;
+	top: 37.5vw;
+	background: url(http://img.tugou.com/mb/images/m_index/icon.png) no-repeat center center;
+	background-size: 100% auto;
+	z-index: 90;
+}
+#close_form{
+	position: absolute;
+	top: 4vw;
+	right: 3.4vw;
+	font-size: 6vw;
+	width: 6.8vw;
+	height: 6.8vw;
+	line-height: 6.8vw;
+	text-align: center;
+	color: rgb(98,98,98);
+	z-index: 999;
+}
+.afCtrl > span{
+	position: absolute;
+	width: 100%;
+	bottom: 4.6vw;
+	text-align: center;
+	font-size: 5.8vw;
+}

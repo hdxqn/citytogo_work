@@ -7,7 +7,7 @@
 -moz-user-select:none;
 -ms-user-select:none;
 user-select:none; 
-}
+}  
 html{
 	margin: 0;
 	padding: 0;
@@ -234,8 +234,8 @@ body{
 	padding:42.2vw 0 0 0; 
 }
 #close-box{
-	width: 5.4;
-	height: 5.4;
+	width: 5.4vw;
+	height: 5.4vw;
 	position: absolute;
 	right: 0;
 	top: 0;
